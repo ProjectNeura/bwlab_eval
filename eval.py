@@ -1,5 +1,6 @@
 from argparse import ArgumentParser as _ArgumentParser
-from os import system as _system
+from os import environ as _environ
+from subprocess import run as _run
 
 from preprocess import *
 
@@ -17,10 +18,10 @@ def __entry__() -> None:
     clear_cache(args.eval_output)
     select_samples(f"/workspace/data/nnUNet_raw/Dataset{args.dataset}_{args.dataset_name}/imagesTs",
                    "/workspace/data/nnUNet_eval_input")
-    _system("export nnUNet_raw=/workspace/data/nnUNet_raw")
-    _system("export nnUNet_preprocessed=/workspace/data/nnUNet_preprocessed")
-    _system("export nnUNet_results=/workspace/data/nnUNet_weights")
-    _system(f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -p {args.plan} -f all --save_probabilities")
+    _environ["nnUNet_raw"] = "/workspace/data/nnUNet_raw"
+    _environ["nnUNet_preprocessed"] = "/workspace/data/nnUNet_preprocessed"
+    _environ["nnUNet_results"] = "/workspace/data/nnUNet_weights"
+    _run(f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -p {args.plan} -f all --save_probabilities".split())
 
 
 if __name__ == "__main__":
