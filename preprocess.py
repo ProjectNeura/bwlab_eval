@@ -1,6 +1,6 @@
 from nibabel import load as _load
-from os import listdir as _listdir, removedirs as _removedirs
-from shutil import copyfile as _copyfile
+from os import listdir as _listdir, mkdir as _mkdir
+from shutil import copyfile as _copyfile, rmtree as _rmtree
 from functools import reduce as _reduce
 from operator import mul as _mul
 
@@ -18,4 +18,5 @@ def select_samples(src: str, dst: str) -> None:
 
 
 def clear_cache(src: str) -> None:
-    _removedirs(src)
+    _rmtree(src)
+    _mkdir(src)
