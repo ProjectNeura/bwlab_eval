@@ -4,9 +4,8 @@ docker run --rm -v "S:/SharedDatasets/workspace/data" --gpus="device=0" -it bwla
 ```
 
 ```shell
-python /workspace/code/preprocess.py
-export nnUNet_raw=/workspace/data/nnUNet_raw
-export nnUNet_preprocessed=/workspace/data/nnUNet_preprocessed
-export nnUNet_results=/workspace/data/nnUNet_weights
-nnUNetv2_predict -i /workspace/data/nnUNet_eval_input -o /workspace/data/nnUNet_eval_output -d 701 -c 2d -p nnUNetResEncUNetMPlans -f all --save_probabilities
+python /workspace/code/eval.py -d 701 -dn AbdomenCT
+python /workspace/code/eval.py -d 701 -dn AbdomenCT -p nnUNetResEncUNetMPlans
+python /workspace/code/eval.py -d 702 -dn AbdomenMR
+python /workspace/code/eval.py -d 702 -dn AbdomenMR -p nnUNetResEncUNetMPlans
 ```

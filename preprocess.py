@@ -1,5 +1,5 @@
 from nibabel import load as _load
-from os import listdir as _listdir
+from os import listdir as _listdir, removedirs as _removedirs
 from shutil import copyfile as _copyfile
 from functools import reduce as _reduce
 from operator import mul as _mul
@@ -17,6 +17,5 @@ def select_samples(src: str, dst: str) -> None:
         _copyfile(f"{src}/{file}", f"{dst}/{file}")
 
 
-if __name__ == "__main__":
-    select_samples("/workspace/data/nnUNet_raw/Dataset702_AbdomenMR-20250215T202943Z-001/Dataset702_AbdomenMR/imagesTs",
-                   "/workspace/data/nnUNet_eval_input")
+def clear_cache(src: str) -> None:
+    _removedirs(src)
