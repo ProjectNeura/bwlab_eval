@@ -19,4 +19,4 @@ def select_samples(src: str, dst: str) -> None:
 
 if __name__ == "__main__":
     select_samples("/workspace/data/nnUNet_raw/Dataset702_AbdomenMR-20250215T202943Z-001/Dataset702_AbdomenMR/imagesTs",
-                   "/workspace/data/temp")
+                   "/workspace/data/nnUNet_eval_output")
