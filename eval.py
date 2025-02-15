@@ -10,6 +10,7 @@ def __entry__() -> None:
     parser.add_argument("-d", "--dataset", type=int)
     parser.add_argument("-dn", "--dataset_name")
     parser.add_argument("-c", "--configuration", default="3d")
+    parser.add_argument("-tr", "--trainer", default="nnUNetTrainer")
     parser.add_argument("-p", "--plan", default="nnUNetPlans")
     parser.add_argument("--eval_input", default="/workspace/data/nnUNet_eval_input")
     parser.add_argument("--eval_output", default="/workspace/data/nnUNet_eval_output")
@@ -21,7 +22,7 @@ def __entry__() -> None:
     _environ["nnUNet_raw"] = "/workspace/data/nnUNet_raw"
     _environ["nnUNet_preprocessed"] = "/workspace/data/nnUNet_preprocessed"
     _environ["nnUNet_results"] = "/workspace/data/nnUNet_weights"
-    _run(f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -p {args.plan} -f all --save_probabilities".split())
+    _run(f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all --save_probabilities".split())
 
 
 if __name__ == "__main__":
