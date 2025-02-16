@@ -22,7 +22,9 @@ def __entry__() -> None:
     _environ["nnUNet_raw"] = "/workspace/data/nnUNet_raw"
     _environ["nnUNet_preprocessed"] = "/workspace/data/nnUNet_preprocessed"
     _environ["nnUNet_results"] = "/workspace/data/nnUNet_weights"
-    _run(f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all --save_probabilities".split())
+    cmd = f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all --save_probabilities"
+    print(cmd)
+    _run(cmd.split())
 
 
 if __name__ == "__main__":
