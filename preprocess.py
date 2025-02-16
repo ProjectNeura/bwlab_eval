@@ -16,6 +16,7 @@ def select_samples(src: str, dst: str) -> None:
     i = 0
     for file in samples:
         _copyfile(f"{src}/{file}", f"{dst}/case{str(i).zfill(4)}_0000.nii.gz")
+        i += 1
 
 
 def clear_cache(src: str) -> None:
