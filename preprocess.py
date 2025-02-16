@@ -11,12 +11,16 @@ def sort(src: str) -> list[str]:
     return r
 
 
-def select_samples(src: str, dst: str) -> None:
+def select_samples(src: str, dst: str) -> dict[str, str]:
     samples = sort(src)[:10]
+    r = {}
     i = 0
     for file in samples:
-        _copyfile(f"{src}/{file}", f"{dst}/case{str(i).zfill(4)}_0000.nii.gz")
+        mapped_name = f"case{str(i).zfill(4)}_0000.nii.gz"
+        r[mapped_name] = file
+        _copyfile(f"{src}/{file}", f"{dst}/{mapped_name}")
         i += 1
+    return r
 
 
 def clear_cache(src: str) -> None:
