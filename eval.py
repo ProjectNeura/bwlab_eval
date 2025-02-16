@@ -56,7 +56,7 @@ def __entry__() -> None:
     print(cmd)
     print(f"Inference time: {timeit(_run, cmd.split())}")
     dice_scores = []
-    for label in range(args.num_classes):
+    for label in range(1, args.num_classes + 1):
         label_dice_scores = evaluate(args.eval_output, f"/workspace/data/nnUNet_raw/Dataset{args.dataset}_{args.dataset_name}/labelsTs", name_mapping, label)
         print(f"Dice score for label {label}: {sum(label_dice_scores) / len(label_dice_scores)}")
         dice_scores += label_dice_scores
