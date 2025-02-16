@@ -4,4 +4,5 @@ LABEL authors="Project Neura"
 RUN apt update
 RUN apt install -y git
 RUN git clone https://github.com/ProjectNeura/bwlab_eval /workspace/code
-RUN pip install nnunetv2 nibabel
+RUN pip install nibabel
+RUN pip install git+https://github.com/ProjectNeura/nnUNet
