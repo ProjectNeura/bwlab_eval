@@ -28,7 +28,7 @@ def normalize(mask: _ndarray, keep_label: int) -> _ndarray:
 def evaluate(pred_dir: str, gt_dir: str, name_mapping: dict[str, str], label: int) -> list[float]:
     r = []
     for pred_name, gt_name in name_mapping.items():
-        pred = normalize(_load(f"{pred_dir}/{pred_name}").get_fdata(), label)
+        pred = normalize(_load(f"{pred_dir}/{pred_name.replace('_0000', '')}").get_fdata(), label)
         gt = normalize(_load(f"{gt_dir}/{gt_name}").get_fdata(), label)
         r.append(dice_coefficient(pred, gt))
     return r
