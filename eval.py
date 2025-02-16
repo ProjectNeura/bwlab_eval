@@ -21,6 +21,7 @@ def dice_coefficient(pred: _ndarray, gt: _ndarray) -> float:
 
 def normalize(mask: _ndarray, keep_label: int) -> _ndarray:
     mask = mask.round()
+    mask[mask == keep_label] = 1
     mask[mask != keep_label] = 0
     return mask
 
