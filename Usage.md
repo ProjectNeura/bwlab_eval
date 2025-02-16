@@ -4,8 +4,8 @@ docker run --ipc=host --rm -v "S:/SharedDatasets:/workspace/data" --gpus="device
 ```
 
 ```shell
-python /workspace/code/eval.py -d 701 -tr nnUNetTrainerMICCAI -dn AbdomenCT -c 3d_fullres
-python /workspace/code/eval.py -d 701 -tr nnUNetTrainerMICCAI -dn AbdomenCT -c 3d_fullres -p nnUNetResEncUNetMPlans
-python /workspace/code/eval.py -d 702 -tr nnUNetTrainerMICCAI -dn AbdomenMR -c 3d_fullres
-python /workspace/code/eval.py -d 702 -tr nnUNetTrainerMICCAI -dn AbdomenMR -c 3d_fullres -p nnUNetResEncUNetMPlans
+python /workspace/code/main.py -d 701 -tr nnUNetTrainerMICCAI -dn AbdomenCT
+python /workspace/code/main.py -d 701 -tr nnUNetTrainerMICCAI -dn AbdomenCT -p nnUNetResEncUNetMPlans
+python /workspace/code/main.py -d 702 -tr nnUNetTrainerMICCAI -dn AbdomenMR 
+python /workspace/code/main.py -d 702 -tr nnUNetTrainerMICCAI -dn AbdomenMR -p nnUNetResEncUNetMPlans
 ```
