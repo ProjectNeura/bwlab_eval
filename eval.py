@@ -52,7 +52,6 @@ def __entry__() -> None:
     _environ["nnUNet_raw"] = "/workspace/data/nnUNet_raw"
     _environ["nnUNet_preprocessed"] = "/workspace/data/nnUNet_preprocessed"
     _environ["nnUNet_results"] = "/workspace/data/nnUNet_weights"
-    _environ["NNUNET_DISABLE_BG_WORKERS"] = "1"
     cmd = f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all"
     print(cmd)
     print(f"Inference time: {timeit(_run, cmd.split())}")
