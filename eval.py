@@ -33,7 +33,7 @@ def __entry__() -> None:
     parser.add_argument("--gt_path")
     parser.add_argument("--save_path")
     args = parser.parse_args()
-    filenames = [x for x in _listdir(args.pred_path) if x.endswith('.nii.gz')]
+    filenames = [x for x in _listdir(args.seg_path) if x.endswith('.nii.gz')]
     seg_metrics = _OrderedDict({label: [] for label in LABELS})
     seg_metrics["mean"] = []
     for filename in filenames:

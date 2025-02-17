@@ -4,8 +4,8 @@ docker run --ipc=host --rm -v "S:/SharedDatasets:/workspace/data" --gpus="device
 ```
 
 ```shell
-python /workspace/code/main.py -d 701 -tr nnUNetTrainerMICCAI -dn AbdomenCT
-python /workspace/code/main.py -d 701 -tr nnUNetTrainerMICCAI -dn AbdomenCT -p nnUNetResEncUNetMPlans
-python /workspace/code/main.py -d 702 -tr nnUNetTrainerMICCAI -dn AbdomenMR 
-python /workspace/code/main.py -d 702 -tr nnUNetTrainerMICCAI -dn AbdomenMR -p nnUNetResEncUNetMPlans
+python /workspace/code/main.py -tr nnUNetTrainerMICCAI -dn AbdomenCT -d 701
+python /workspace/code/main.py -tr nnUNetTrainerMICCAI -dn AbdomenCT -d 701 -p nnUNetResEncUNetMPlans
+python /workspace/code/main.py -tr nnUNetTrainerMICCAI -dn AbdomenMR -d 702
+python /workspace/code/main.py -tr nnUNetTrainerMICCAI -dn AbdomenMR -d 702 -p nnUNetResEncUNetMPlans
 ```
