@@ -8,7 +8,7 @@ from numpy import ndarray as _ndarray, NaN as _NaN, signedinteger as _signedinte
 from pandas import DataFrame as _DataFrame
 
 
-def compute_dice_coefficient(pred: _ndarray[bool], gt: _ndarray[bool]) -> float | _NaN:
+def compute_dice_coefficient(pred: _ndarray[bool], gt: _ndarray[bool]) -> float:
     volume_sum = gt.sum() + pred.sum()
     if volume_sum == 0:
         return _NaN
