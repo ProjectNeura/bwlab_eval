@@ -10,4 +10,4 @@ if __name__ == "__main__":
     parser.add_argument("-p", "--plan", default="nnUNetPlans")
     args = parser.parse_args()
     _run(f"python infer.py -d {args.dataset} -dn {args.dataset_name} -c 3d_fullres -tr {args.trainer} -p {args.plan} -n 13")
-    _run(f"python eval.py /workspace/data/nnUNet_eval_output /workspace/data/nnUNet_raw/Dataset{args.dataset}_{args.dataset_name}/imagesTs ./results.csv")
+    _run(f"python eval.py --gt_path /workspace/data/nnUNet_raw/Dataset{args.dataset}_{args.dataset_name}/labelsTs --save_path /workspace/data/bwlab_eval_results.csv")

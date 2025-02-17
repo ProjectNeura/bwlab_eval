@@ -20,7 +20,6 @@ def __entry__() -> None:
     parser.add_argument("-c", "--configuration", default="3d")
     parser.add_argument("-tr", "--trainer", default="nnUNetTrainer")
     parser.add_argument("-p", "--plan", default="nnUNetPlans")
-    parser.add_argument("-n", "--num_classes", type=int, default=13)
     parser.add_argument("--eval_input", default="/workspace/data/nnUNet_eval_input")
     parser.add_argument("--eval_output", default="/workspace/data/nnUNet_eval_output")
     args = parser.parse_args()
