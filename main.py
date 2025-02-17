@@ -10,5 +10,6 @@ if __name__ == "__main__":
     parser.add_argument("-p", "--plan", default="nnUNetPlans")
     parser.add_argument("--eval_only", action=_BooleanOptionalAction, default=False,)
     args = parser.parse_args()
-    _run(f"python /workspace/code/infer.py -d {args.dataset} -dn {args.dataset_name} -c 3d_fullres -tr {args.trainer} -p {args.plan}".split())
+    if not args.eval_only:
+        _run(f"python /workspace/code/infer.py -d {args.dataset} -dn {args.dataset_name} -c 3d_fullres -tr {args.trainer} -p {args.plan}".split())
     _run(f"python /workspace/code/eval.py --gt_path /workspace/data/nnUNet_raw/Dataset{args.dataset}_{args.dataset_name}/labelsTs --save_path /workspace/data/bwlab_eval_results.csv".split())
