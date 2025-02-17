@@ -8,7 +8,7 @@ if __name__ == "__main__":
     parser.add_argument("-dn", "--dataset_name")
     parser.add_argument("-tr", "--trainer", default="nnUNetTrainer")
     parser.add_argument("-p", "--plan", default="nnUNetPlans")
-    parser.add_argument("-ps", "--plans_stage", type=int, default=-1)
+    parser.add_argument("-mp", "--model_path", default="")
     parser.add_argument("--eval_only", action=_BooleanOptionalAction, default=False,)
     args = parser.parse_args()
     if not args.eval_only:
