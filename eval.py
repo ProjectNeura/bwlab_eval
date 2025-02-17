@@ -37,7 +37,7 @@ def __entry__() -> None:
     seg_metrics = _OrderedDict({label: [] for label in LABELS})
     seg_metrics["mean"] = []
     for filename in filenames:
-        pred = _uint8(_load(f"{args.pred_path}/{filename}").get_fdata())
+        pred = _uint8(_load(f"{args.seg_path}/{filename}").get_fdata())
         gt = _uint8(_load(f"{args.gt_path}/{filename}").get_fdata())
         for i in range(1, 14):
             if _sum(gt == i) == 0 and _sum(pred == i) == 0:
