@@ -53,7 +53,7 @@ def __entry__() -> None:
                 dsc = compute_dice_coefficient(organ_i_gt, organ_i_pred)
             seg_metrics[LABELS[i - 1]].append(dsc := round(dsc, 4))
             seg_metrics["mean"].append(dsc)
-        df = _DataFrame({k: sum(v) / len(v) for k, v in seg_metrics.items()})
+        df = _DataFrame({k: [sum(v) / len(v)] for k, v in seg_metrics.items()})
         df.to_csv(args.save_path, index=False)
 
 
