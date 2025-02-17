@@ -47,7 +47,7 @@ def __entry__() -> None:
             else:
                 if i == 5 or i == 6 or i ==10:
                     z_lower, z_upper = find_lower_upper_zbound(gt == i)
-                    organ_i_gt, organ_i_pred = gt[:, :, z_lower:z_upper] == i, parser[:, :, z_lower:z_upper] == i
+                    organ_i_gt, organ_i_pred = gt[:, :, z_lower:z_upper] == i, pred[:, :, z_lower:z_upper] == i
                 else:
                     organ_i_gt, organ_i_pred = gt == i, pred == i
                 dsc = compute_dice_coefficient(organ_i_gt, organ_i_pred)
