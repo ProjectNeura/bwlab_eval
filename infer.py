@@ -20,7 +20,7 @@ def __entry__() -> None:
     parser.add_argument("-c", "--configuration", default="3d")
     parser.add_argument("-tr", "--trainer", default="nnUNetTrainer")
     parser.add_argument("-p", "--plan", default="nnUNetPlans")
-    parser.add_argument("-ps", "--plan_stage", type=int, default=-1)
+    parser.add_argument("-ps", "--plans_stage", type=int, default=-1)
     parser.add_argument("--eval_input", default="/workspace/data/nnUNet_eval_input")
     parser.add_argument("--eval_output", default="/workspace/data/nnUNet_eval_output")
     args = parser.parse_args()
@@ -31,7 +31,7 @@ def __entry__() -> None:
     _environ["nnUNet_raw"] = "/workspace/data/nnUNet_raw"
     _environ["nnUNet_preprocessed"] = "/workspace/data/nnUNet_preprocessed"
     _environ["nnUNet_results"] = "/workspace/data/nnUNet_weights"
-    stage = "" if args.plan_stage < 0 else f" --plans_stage {args.plan_stage}"
+    stage = "" if args.plans_stage < 0 else f" --plans_stage {args.plans_stage}"
     cmd = f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan}{stage} -f all"
     print(cmd)
     print(f"Inference time: {timeit(_run, cmd.split())}")
