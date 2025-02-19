@@ -22,6 +22,7 @@ def __entry__() -> None:
     parser.add_argument("-p", "--plan", default="nnUNetPlans")
     parser.add_argument("--eval_input", default="/workspace/data/nnUNet_eval_input")
     parser.add_argument("--eval_output", default="/workspace/data/nnUNet_eval_output")
+    parser.add_argument("-mp", "--model_path", default="")
     args = parser.parse_args()
     clear_cache(args.eval_input)
     clear_cache(args.eval_output)
@@ -30,7 +31,10 @@ def __entry__() -> None:
     _environ["nnUNet_raw"] = "/workspace/data/nnUNet_raw"
     _environ["nnUNet_preprocessed"] = "/workspace/data/nnUNet_preprocessed"
     _environ["nnUNet_results"] = "/workspace/data/nnUNet_weights"
-    cmd = f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all"
+    if args.model_path:
+        cmd = f"/workspace/data/nnunet_infer_nii.py -i {args.eval_input} -o {args.eval_output} --model_path {args.model_path}"
+    else:
+        cmd = f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all"
     print(cmd)
     print(f"Inference time: {timeit(_run, cmd.split())}")
 
