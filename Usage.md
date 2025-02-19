@@ -16,6 +16,6 @@ python /workspace/code/main.py -dn AbdomenMR -d 702 -c 3d_fullres_S4
 python /workspace/code/main.py -dn AbdomenMR -d 702 -c 3d_fullres_S5
 python /workspace/code/main.py -dn AbdomenMR -d 702 -c 3d_fullres_S4 -p nnUNetResEncUNetMPlans
 
-python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg__nnUNetPlans__3d_fullres
-python /workspace/code/main.py -dn AbdomenMR -d 702 -mp /workspace/data/nnUNet_weights/Dataset702_AbdomenMR/nnUNetTrainerMICCAI_repvgg702__nnUNetPlans__3d_fullres
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg__nnUNetPlans__3d_fullres -cp checkpoint_100.pth
+python /workspace/code/main.py -dn AbdomenMR -d 702 -mp /workspace/data/nnUNet_weights/Dataset702_AbdomenMR/nnUNetTrainerMICCAI_repvgg702__nnUNetPlans__3d_fullres -cp checkpoint_100.pth
 ```
