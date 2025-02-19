@@ -14,7 +14,7 @@ def timeit(runnable: _Callable[[...], _Any], *args) -> float:
 
 
 def __entry__() -> None:
-    parser = _ArgumentParser(prog="bwlab_eval")
+    parser = _ArgumentParser(prog="infer")
     parser.add_argument("-d", "--dataset", type=int)
     parser.add_argument("-dn", "--dataset_name")
     parser.add_argument("-c", "--configuration", default="3d")

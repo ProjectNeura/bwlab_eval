@@ -28,7 +28,7 @@ LABELS: list[str] = ["liver", "right-kidney", "spleen", "pancreas", "aorta", "iv
 
 
 def __entry__() -> None:
-    parser = _ArgumentParser(prog="bwlab_eval")
+    parser = _ArgumentParser(prog="eval")
     parser.add_argument("--seg_path", default="/workspace/data/nnUNet_eval_output")
     parser.add_argument("--gt_path")
     parser.add_argument("--save_path")
