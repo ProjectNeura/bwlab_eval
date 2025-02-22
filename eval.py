@@ -32,6 +32,7 @@ def __entry__() -> None:
     parser.add_argument("--seg_path", default="/workspace/data/nnUNet_eval_output")
     parser.add_argument("--gt_path")
     parser.add_argument("--save_path")
+    parser.add_argument("--name", default="Untitled")
     args = parser.parse_args()
     filenames = [x for x in _listdir(args.seg_path) if x.endswith('.nii.gz')]
     seg_metrics = _OrderedDict({label: [] for label in LABELS})
@@ -53,8 +54,11 @@ def __entry__() -> None:
                 dsc = compute_dice_coefficient(organ_i_gt, organ_i_pred)
             seg_metrics[LABELS[i - 1]].append(dsc := round(dsc, 4))
             seg_metrics["mean"].append(dsc)
-        df = _DataFrame({k: [sum(v) / len(v)] for k, v in seg_metrics.items()})
-        df.to_csv(args.save_path, index=False)
+        df = {k: [sum(v) / len(v)] for k, v in seg_metrics.items()}
+        if args.name:
+            df["name"] = args.name
+        df = _DataFrame()
+        df.to_csv(args.save_path, index=False, mode="a" if args.name else "w")
 
 
 if __name__ == "__main__":

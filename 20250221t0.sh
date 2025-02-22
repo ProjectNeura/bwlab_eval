@@ -1,0 +1,11 @@
+#!/bin/bash
+
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_100.pth --name l3_100 --save_path /workspace/data/bwlab_eval_results_t0.csv
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_200.pth --name l3_200 --save_path /workspace/data/bwlab_eval_results_t0.csv
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_300.pth --name l3_300 --save_path /workspace/data/bwlab_eval_results_t0.csv
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_400.pth --name l3_400 --save_path /workspace/data/bwlab_eval_results_t0.csv
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_500.pth --name l3_500 --save_path /workspace/data/bwlab_eval_results_t0.csv
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_600.pth --name l3_600 --save_path /workspace/data/bwlab_eval_results_t0.csv
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_700.pth --name l3_700 --save_path /workspace/data/bwlab_eval_results_t0.csv
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_800.pth --name l3_800 --save_path /workspace/data/bwlab_eval_results_t0.csv
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_l3__nnUNetPlans__3d_fullres -cp checkpoint_best.pth --name l3_best --save_path /workspace/data/bwlab_eval_results_t0.csv

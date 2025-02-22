@@ -15,7 +15,8 @@ if __name__ == "__main__":
     parser.add_argument("--eval_input", default="/workspace/data/nnUNet_eval_input")
     parser.add_argument("--eval_output", default="/workspace/data/nnUNet_eval_output")
     parser.add_argument("--save_path", default="/workspace/data/bwlab_eval_results.csv")
+    parser.add_argument("--name", default="Untitled")
     args = parser.parse_args()
     if not args.eval_only:
-        _run(f"python /workspace/code/infer.py -d {args.dataset} -dn {args.dataset_name} -c {args.configuration} -tr {args.trainer} -p {args.plan} -mp {args.model_path} -cp {args.checkpoint} --eval_input {args.eval_input} --eval_output {args.eval_output}".split())
-    _run(f"python /workspace/code/eval.py --gt_path /workspace/data/nnUNet_raw/Dataset{args.dataset}_{args.dataset_name}/labelsTs --seg_path {args.eval_output} --save_path {args.save_path}".split())
+        _run(f"python /workspace/code/infer.py -d {args.dataset} -dn {args.dataset_name} -c {args.configuration} -tr {args.trainer} -p {args.plan} -mp {args.model_path} -cp {args.checkpoint} --eval_input {args.eval_input} --eval_output {args.eval_output} --name {args.name}".split())
+    _run(f"python /workspace/code/eval.py --gt_path /workspace/data/nnUNet_raw/Dataset{args.dataset}_{args.dataset_name}/labelsTs --seg_path {args.eval_output} --save_path {args.save_path} --name {args.name}".split())

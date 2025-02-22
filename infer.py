@@ -24,6 +24,8 @@ def __entry__() -> None:
     parser.add_argument("--eval_output", default="/workspace/data/nnUNet_eval_output")
     parser.add_argument("-mp", "--model_path", default="")
     parser.add_argument("-cp", "--checkpoint", default="checkpoint_final.pth")
+    parser.add_argument("--save_path", default="/workspace/data/bwlab_inference_time.txt")
+    parser.add_argument("--name", default="Untitled")
     args = parser.parse_args()
     clear_cache(args.eval_input)
     clear_cache(args.eval_output)
@@ -37,7 +39,9 @@ def __entry__() -> None:
     else:
         cmd = f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all"
     print(cmd)
-    print(f"Inference time: {timeit(_run, cmd.split())}")
+    print(f"Inference time: {(t := timeit(_run, cmd.split()))}")
+    with open(args.save_path, "a") as f:
+        f.write(f"{args.name}: {t}\n")
 
 
 if __name__ == "__main__":
