@@ -58,7 +58,7 @@ def __entry__() -> None:
         if args.name:
             df["name"] = [args.name]
         df = _DataFrame()
-        df.to_csv(args.save_path, index=False, mode="a" if args.name else "w")
+        df.to_csv(args.save_path, index=False, mode="a" if args.name else "w", header=False)
 
 
 if __name__ == "__main__":
