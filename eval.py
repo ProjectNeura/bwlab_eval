@@ -56,7 +56,7 @@ def __entry__() -> None:
             seg_metrics["mean"].append(dsc)
         df = {k: [sum(v) / len(v)] for k, v in seg_metrics.items()}
         if args.name:
-            df["name"] = args.name
+            df["name"] = [args.name]
         df = _DataFrame()
         df.to_csv(args.save_path, index=False, mode="a" if args.name else "w")
 
