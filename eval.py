@@ -57,7 +57,7 @@ def __entry__() -> None:
         df = {k: [sum(v) / len(v)] for k, v in seg_metrics.items()}
         if args.name:
             df["name"] = [args.name]
-        df = _DataFrame()
+        df = _DataFrame(df)
         df.to_csv(args.save_path, index=False, mode="a" if args.name else "w", header=False)
 
 
