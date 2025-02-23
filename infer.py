@@ -37,7 +37,7 @@ def __entry__() -> None:
     if args.model_path:
         cmd = f"python /workspace/data/nnUNet_inference/nnunet_infer_nii.py -i {args.eval_input} -o {args.eval_output} --model_path {args.model_path} --checkpoint {args.checkpoint}"
     else:
-        cmd = f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all"
+        cmd = f"nnUNetv2_predict -i {args.eval_input} -o {args.eval_output} -d {args.dataset_name} -c {args.configuration} -tr {args.trainer} -p {args.plan} -f all"
     print(cmd)
     print(f"Inference time: {(t := timeit(_run, cmd.split()))}")
     with open(args.save_path, "a") as f:
