@@ -1,0 +1,32 @@
+#!/bin/bash
+
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_100.pth --name f3_100
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_200.pth --name f3_200
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_300.pth --name f3_300
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_400.pth --name f3_400
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_500.pth --name f3_500
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_600.pth --name f3_600
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_700.pth --name f3_700
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_800.pth --name f3_800
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_900.pth --name f3_900
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f3__nnUNetPlans__3d_fullres -cp checkpoint_best.pth --name f3_best
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_100.pth --name f4_100
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_200.pth --name f4_200
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_300.pth --name f4_300
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_400.pth --name f4_400
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_500.pth --name f4_500
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_600.pth --name f4_600
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_700.pth --name f4_700
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_800.pth --name f4_800
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_900.pth --name f4_900
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f4__nnUNetPlans__3d_fullres -cp checkpoint_best.pth --name f4_best
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_100.pth --name f5_100
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_200.pth --name f5_200
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_300.pth --name f5_300
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_400.pth --name f5_400
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_500.pth --name f5_500
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_600.pth --name f5_600
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_700.pth --name f5_700
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_800.pth --name f5_800
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_900.pth --name f5_900
+python /workspace/code/main.py -dn AbdomenCT -d 701 -mp /workspace/data/nnUNet_weights/Dataset701_AbdomenCT/nnUNetTrainerMICCAI_repvgg_f5__nnUNetPlans__3d_fullres -cp checkpoint_best.pth --name f5_best
